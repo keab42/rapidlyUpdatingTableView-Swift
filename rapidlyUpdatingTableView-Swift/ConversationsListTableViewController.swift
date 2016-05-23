@@ -45,7 +45,7 @@ class ConversationsListTableViewController: UITableViewController, NSFetchedResu
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
-        let modelURL = NSBundle.mainBundle().URLForResource("DummyConversation", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("rapidlyUpdatingTableView_Swift", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     
@@ -93,11 +93,17 @@ class ConversationsListTableViewController: UITableViewController, NSFetchedResu
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        if let secData = sectionData {
+            do {
+                try self.fetchedResultsController.performFetch()
+                generateMessagesInSections(secData)
+            } catch {
+                let fetchError = error as NSError
+                print("\(fetchError), \(fetchError.userInfo)")
+            }
+            self.tableView.reloadData()
+        }
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,8 +114,12 @@ class ConversationsListTableViewController: UITableViewController, NSFetchedResu
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        print("MKTEST - \(self.fetchedResultsController.sections!.count)")
-        return fetchedResultsController.sections!.count;
+        if let sections = fetchedResultsController.sections {
+            print("MKTEST - \(sections.count)")
+            return sections.count;
+        }
+        
+        return 0
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -252,13 +262,13 @@ class ConversationsListTableViewController: UITableViewController, NSFetchedResu
         
         //populate with new data
         let context = managedObjectContext
-        for i in 0...numberOfItemsPerSection.count {
+        for i in 0...numberOfItemsPerSection.count - 1 {
             let numberItems = numberOfItemsPerSection[i].intValue
-            for j in 0...numberItems {
+            for j in 0...numberItems - 1 {
                 print("MKTEST - i = \(i), j = \(j)")
                 let model = NSEntityDescription.insertNewObjectForEntityForName("DummyConversation", inManagedObjectContext: context) as! DummyConversationModel
-                model.titleText = "Section \(numberItems), Cell \(j)"
-                model.sectionId = i
+                model.titleText = "Section \(i), Cell \(j)"
+                model.sectionId = Int32(i)
                 model.timeStamp = NSDate()
             }
         }
@@ -274,14 +284,15 @@ class ConversationsListTableViewController: UITableViewController, NSFetchedResu
             let saveError = error as NSError
             print("MKTEST - \(saveError), \(saveError.userInfo)")
         }
-        
     }
     
     func deleteAllMessages() {
         let context = managedObjectContext
         
-        for conv in fetchedResultsController.fetchedObjects! as! [DummyConversationModel] {
-            context.deleteObject(conv)
+        if let fetched = fetchedResultsController.fetchedObjects {
+            for conv in fetched as! [DummyConversationModel]  {
+                context.deleteObject(conv)
+            }
         }
         
         do {

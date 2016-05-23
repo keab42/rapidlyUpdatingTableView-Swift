@@ -9,10 +9,12 @@
 import UIKit
 import CoreData
 
+@objc(DummyConversationModel)
+
 class DummyConversationModel: NSManagedObject {
     @NSManaged var titleText: String
     @NSManaged var dummyText: String
     @NSManaged var timeStamp: NSDate
-    @NSManaged var sectionId: Int
+    @NSManaged var sectionId: Int32
 
 }

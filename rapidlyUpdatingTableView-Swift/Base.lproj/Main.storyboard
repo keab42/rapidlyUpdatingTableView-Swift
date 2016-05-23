@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="dummyMessageCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversationCell" rowHeight="70" id="rsF-wD-VWn" customClass="DummyMessageTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="dummyMessageCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="dummyMessageCell" rowHeight="70" id="rsF-wD-VWn" customClass="DummyMessageTableViewCell" customModule="rapidlyUpdatingTableView_Swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rsF-wD-VWn" id="iOU-ia-LlH">
@@ -164,9 +164,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cellTitle" destination="mcG-dB-rWU" id="McG-vR-Cgq"/>
-                                    <outlet property="timestampLabel" destination="C8b-I6-gBJ" id="I5p-37-oLR"/>
-                                    <outlet property="titleLabel" destination="mcG-dB-rWU" id="bl4-6X-JDp"/>
+                                    <outlet property="timestampLabel" destination="C8b-I6-gBJ" id="d9M-3n-Tly"/>
+                                    <outlet property="titleLabel" destination="mcG-dB-rWU" id="FeW-6H-lYd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
