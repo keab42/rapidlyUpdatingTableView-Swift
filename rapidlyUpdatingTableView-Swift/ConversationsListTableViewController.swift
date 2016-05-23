@@ -9,6 +9,9 @@
 import UIKit
 
 class ConversationsListTableViewController: UITableViewController {
+    
+    var updatesPerMinute: Int?
+    var sectionData: [Int]?
 
     override func viewDidLoad() {
         super.viewDidLoad()

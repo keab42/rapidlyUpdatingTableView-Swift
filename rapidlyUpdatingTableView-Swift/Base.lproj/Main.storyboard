@@ -26,6 +26,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hTR-AI-TBf">
                                 <rect key="frame" x="33" y="66" width="513" height="31"/>
+                                <connections>
+                                    <action selector="section1SliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kgN-D6-Kpl"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJw-aH-gVR">
                                 <rect key="frame" x="554" y="71" width="11" height="21"/>
@@ -41,6 +44,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Oo-rl-bbZ">
                                 <rect key="frame" x="33" y="142" width="513" height="31"/>
+                                <connections>
+                                    <action selector="section2SliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gMh-Lt-4Cm"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FC5-L0-wND">
                                 <rect key="frame" x="554" y="147" width="11" height="21"/>
@@ -56,6 +62,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-3T-WTk">
                                 <rect key="frame" x="33" y="218" width="513" height="31"/>
+                                <connections>
+                                    <action selector="updatesSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OlL-Zt-J4S"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y8-O4-3UI">
                                 <rect key="frame" x="554" y="223" width="11" height="21"/>
@@ -101,6 +110,15 @@
                             <constraint firstItem="lh2-3T-WTk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="v2K-c7-bVq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="goButton" destination="rVc-x3-vfg" id="iEy-aS-k22"/>
+                        <outlet property="numberUpdatesSlider" destination="lh2-3T-WTk" id="3Ev-OY-9q2"/>
+                        <outlet property="numberUpdatesValueLabel" destination="6y8-O4-3UI" id="B9v-Ca-E4i"/>
+                        <outlet property="section1Slider" destination="hTR-AI-TBf" id="T2F-bI-Dvi"/>
+                        <outlet property="section1ValueLabel" destination="mJw-aH-gVR" id="jm7-Sk-eUy"/>
+                        <outlet property="section2Slider" destination="5Oo-rl-bbZ" id="o8a-fa-uAz"/>
+                        <outlet property="section2ValueLabel" destination="FC5-L0-wND" id="R4G-cd-sDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
