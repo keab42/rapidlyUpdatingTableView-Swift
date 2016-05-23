@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "mainToTableSegue" {
             let sectionData = [Int(section1Slider.value), Int(section2Slider.value)];
-            let dest:ConversationsListTableViewController  = segue.destinationViewController as! ConversationsListTableViewController
+            let dest = segue.destinationViewController as! ConversationsListTableViewController
             //Set the information we need
             dest.sectionData = sectionData
             dest.updatesPerMinute = Int(numberUpdatesSlider.value)

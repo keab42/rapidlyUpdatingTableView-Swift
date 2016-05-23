@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="166"/>
         </scene>
-        <!--Conversation List Table View Controller-->
+        <!--Conversations List Table View Controller-->
         <scene sceneID="B7b-uV-a0O">
             <objects>
-                <tableViewController storyboardIdentifier="ConversationList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G25-Iy-vL3" customClass="ConversationListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ConversationList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G25-Iy-vL3" customClass="ConversationsListTableViewController" customModule="rapidlyUpdatingTableView_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="crE-zU-2oL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellTitle" destination="mcG-dB-rWU" id="McG-vR-Cgq"/>
-                                    <outlet property="timestampLabel" destination="C8b-I6-gBJ" id="RK7-Pf-sx4"/>
+                                    <outlet property="timestampLabel" destination="C8b-I6-gBJ" id="I5p-37-oLR"/>
+                                    <outlet property="titleLabel" destination="mcG-dB-rWU" id="bl4-6X-JDp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

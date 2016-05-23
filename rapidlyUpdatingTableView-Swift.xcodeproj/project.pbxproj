@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4CE84C1CF3AF29002B7EF2 /* DummyMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CE84B1CF3AF29002B7EF2 /* DummyMessageTableViewCell.swift */; };
 		5A89D9291CF26243007EBA3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89D9281CF26243007EBA3E /* AppDelegate.swift */; };
 		5A89D92B1CF26243007EBA3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89D92A1CF26243007EBA3E /* ViewController.swift */; };
 		5A89D92E1CF26244007EBA3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A89D92C1CF26244007EBA3E /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A4CE84B1CF3AF29002B7EF2 /* DummyMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyMessageTableViewCell.swift; path = "Table Cells/DummyMessageTableViewCell.swift"; sourceTree = "<group>"; };
 		5A89D9251CF26243007EBA3E /* rapidlyUpdatingTableView-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rapidlyUpdatingTableView-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A89D9281CF26243007EBA3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A89D92A1CF26243007EBA3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A4CE84A1CF3AEE4002B7EF2 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5A4CE84B1CF3AF29002B7EF2 /* DummyMessageTableViewCell.swift */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
 		5A89D91C1CF26242007EBA3E = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		5A89D9271CF26243007EBA3E /* rapidlyUpdatingTableView-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				5A4CE84A1CF3AEE4002B7EF2 /* Table Cells */,
 				5A89D93F1CF282BB007EBA3E /* Models */,
 				5A89D9281CF26243007EBA3E /* AppDelegate.swift */,
 				5A89D92A1CF26243007EBA3E /* ViewController.swift */,
@@ -113,6 +124,7 @@
 				TargetAttributes = {
 					5A89D9241CF26243007EBA3E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = PCS6LG457P;
 					};
 				};
 			};
@@ -156,6 +168,7 @@
 				5A89D92B1CF26243007EBA3E /* ViewController.swift in Sources */,
 				5A89D9311CF26244007EBA3E /* rapidlyUpdatingTableView_Swift.xcdatamodeld in Sources */,
 				5A89D93E1CF28291007EBA3E /* ConversationsListTableViewController.swift in Sources */,
+				5A4CE84C1CF3AF29002B7EF2 /* DummyMessageTableViewCell.swift in Sources */,
 				5A89D9291CF26243007EBA3E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "rapidlyUpdatingTableView-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.keable.matthew.rapidlyUpdatingTableView-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -282,10 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "rapidlyUpdatingTableView-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.keable.matthew.rapidlyUpdatingTableView-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -308,6 +327,7 @@
 				5A89D93C1CF26244007EBA3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
