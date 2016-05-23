@@ -13,6 +13,8 @@
 		5A89D9311CF26244007EBA3E /* rapidlyUpdatingTableView_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A89D92F1CF26244007EBA3E /* rapidlyUpdatingTableView_Swift.xcdatamodeld */; };
 		5A89D9331CF26244007EBA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A89D9321CF26244007EBA3E /* Assets.xcassets */; };
 		5A89D9361CF26244007EBA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A89D9341CF26244007EBA3E /* LaunchScreen.storyboard */; };
+		5A89D93E1CF28291007EBA3E /* ConversationsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89D93D1CF28291007EBA3E /* ConversationsListTableViewController.swift */; };
+		5A89D9411CF282F5007EBA3E /* DummyConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89D9401CF282F5007EBA3E /* DummyConversationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5A89D9321CF26244007EBA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A89D9351CF26244007EBA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A89D9371CF26244007EBA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A89D93D1CF28291007EBA3E /* ConversationsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsListTableViewController.swift; sourceTree = "<group>"; };
+		5A89D9401CF282F5007EBA3E /* DummyConversationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyConversationModel.swift; path = Models/DummyConversationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		5A89D9271CF26243007EBA3E /* rapidlyUpdatingTableView-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				5A89D93F1CF282BB007EBA3E /* Models */,
 				5A89D9281CF26243007EBA3E /* AppDelegate.swift */,
 				5A89D92A1CF26243007EBA3E /* ViewController.swift */,
 				5A89D92C1CF26244007EBA3E /* Main.storyboard */,
@@ -63,8 +68,17 @@
 				5A89D9341CF26244007EBA3E /* LaunchScreen.storyboard */,
 				5A89D9371CF26244007EBA3E /* Info.plist */,
 				5A89D92F1CF26244007EBA3E /* rapidlyUpdatingTableView_Swift.xcdatamodeld */,
+				5A89D93D1CF28291007EBA3E /* ConversationsListTableViewController.swift */,
 			);
 			path = "rapidlyUpdatingTableView-Swift";
+			sourceTree = "<group>";
+		};
+		5A89D93F1CF282BB007EBA3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A89D9401CF282F5007EBA3E /* DummyConversationModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A89D9411CF282F5007EBA3E /* DummyConversationModel.swift in Sources */,
 				5A89D92B1CF26243007EBA3E /* ViewController.swift in Sources */,
 				5A89D9311CF26244007EBA3E /* rapidlyUpdatingTableView_Swift.xcdatamodeld in Sources */,
+				5A89D93E1CF28291007EBA3E /* ConversationsListTableViewController.swift in Sources */,
 				5A89D9291CF26243007EBA3E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
